@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web DevelopmentAcademy</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f7ff;
+    }
+
+    .navbar{
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .hero{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to right, #4f46e5, #7c3aed);
+      color: white;
+      padding: 80px 0;
+    }
+
+    .hero h1{
+      font-size: 55px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero p{
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero img{
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .btn-custom{
+      background-color: white;
+      color: #4f46e5;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-custom:hover{
+      background-color: black;
+      color: white;
+    }
+
+    .section-title{
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2{
+      font-size: 40px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .course-card{
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.4s;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      border: 1px solid transparent;
+      
+    }
+
+    .course-card:hover{
+      transform: translateY(-10px);
+      border-color: transparent;
+     }
+     .course-card:active{
+      border-color: #5e3aed;
+     }
+    
+
+    .course-card i{
+      font-size: 50px;
+      color: #4f46e5;
+      margin-bottom: 20px;
+    }
+
+    .course-card h4{
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .about-section{
+      background-color: white;
+      padding: 80px 0;
+    }
+
+    .about-img{
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .stats{
+      background: linear-gradient(to right, #4f46e5, #7c3aed);
+      color: white;
+      padding: 60px 0;
+    }
+
+    .stat-box{
+      text-align: center;
+    }
+
+    .stat-box h2{
+      font-size: 45px;
+      font-weight: bold;
+    }
+
+    .footer{
+      background-color: #111827;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width:768px){
+      .hero{
+        text-align: center;
+      }
+
+      .hero h1{
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container justify-content-between ">
+      <a class="navbar-brand fw-bold text-primary" href="#"> Velocode Academy</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div>
+        <ul class="d-flex gap-5 list-unstyled align-items-center mt-2">
+          <li>
+            Home
+          </li>
+          <li>Contact</li>
+          <li>Shop</li>
+        </ul>
+      </div>
+      <div>
+        <button class="btn btn-info">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-6">
+          <h1>Learn Web Development Easily</h1>
+
+          <p>
+            Start your journey in HTML, CSS, Bootstrap and JavaScript with beginner friendly lessons.
+          </p>
+
+          <button class="btn btn-custom">Start Learning</button>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="coding image">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="py-5" id="courses">
+    <div class="container">
+
+      <div class="section-title">
+        <h1 style="color: #5e3aed;">Popular Courses</h1>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="course-card">
+            <i class="bi bi-filetype-html"></i>
+            <h4>HTML Basics</h4>
+            <p>
+              Learn website structure and create your first webpage easily.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="course-card">
+            <i class="bi bi-palette"></i>
+            <h4>CSS Styling</h4>
+            <p>
+              Design beautiful and modern websites using CSS.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="course-card">
+            <i class="bi bi-bootstrap-fill"></i>
+            <h4>Bootstrap</h4>
+            <p>
+              Build responsive websites quickly with Bootstrap.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img class="about-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="students image">
+        </div>
+
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4">Why Choose Us?</h2>
+
+          <p>
+            We provide beginner friendly lessons with practical projects and modern website designs.
+          </p>
+
+          <p>
+            You will learn step-by-step and create attractive websites without difficult coding.
+          </p>
+
+          <button class="btn btn-primary px-4 py-2">Explore More</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="stat-box">
+            <h2>5K+</h2>
+            <p>Students</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="stat-box">
+            <h2>20+</h2>
+            <p>Courses</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="stat-box">
+            <h2>100%</h2>
+            <p>Beginner Friendly</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-5" id="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact Us</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Enter your email">
+            </div>
+
+            <div class="mb-3">
+              <textarea rows="5" class="form-control" placeholder="Your message"></textarea>
+            </div>
+
+            <button class="btn btn-primary w-100">Send Message</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 CodeStart Academy | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
